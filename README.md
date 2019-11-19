@@ -1,4 +1,4 @@
-backend(express) router 설정
+1. backend(express) router 설정
 	- backend/app.js파일 수정과  backend/routes폴더에 파일 생성
 
 	- backend/app.js에 9, 26 라인을  추가
@@ -11,7 +11,7 @@ backend(express) router 설정
 		- ex) user.js, item.js 등등
 
 
-frontend(vue) 페이지 로딩 방법
+1. frontend(vue) 페이지 로딩 방법
 	- frontend 코드 보시다가 궁금해하실 것 같아서 간략하게 적어보겠습니다.
 
 	- html 파일은 frontend/public/index.html 파일 하나만 존재
@@ -21,7 +21,7 @@ frontend(vue) 페이지 로딩 방법
 		- 이 태그에 frontend/router/index.js의 내용에 따라 frontend/components나 frontend/views에 있는 파일을 로드
 
 
-frontend(vue) router 설정
+1. frontend(vue) router 설정
 	- frontend/router/index.js파일 수정과 frontend/components폴더에 파일 생성
 
 	- frontend/router/index.js에 22~30라인을 추가
@@ -31,13 +31,13 @@ frontend(vue) router 설정
 		- get은 localhost:8080/api/movies로 요청
 
 
-frontend-backend 데이터 교환 방법
+1. frontend-backend 데이터 교환 방법
 	- frontend의 vue.config.js파일에서 proxy 설정이 되어있는 상태
 		- localhost:8080/~로 접속 시, 데이터를 받아오기 위해 localhost:8080/api/~를 요청, 이때 이 주소가  localhost:3000/api/~ 로 porxy 된다.
 			- 여기서 8080이 vue의 포트번호, 3000이 express 포트번호
 			- ex) localhost:8080/movies 접속 -> frontend/src/components/movies.vue의 스크립트 부분에서 localhost:8080/api/movies를 요청 -> proxy에 의해 localhost:3000/api/movies로 변환 -> backend에서 영화 데이터 리턴
 
 
-
-frontend 시작 - frontend 폴더에서 npm run serve
-backend 시작 - backend 폴더에서 DEBUG=backend:* npm start
+1. 실행 방법
+	- frontend 시작 - frontend 폴더에서 npm run serve
+	- backend 시작 - backend 폴더에서 DEBUG=backend:* npm start
